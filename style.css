@@ -1,3 +1,7 @@
+.wrapper {
+  overflow:hidden;
+}
+
 li {
   font-size:0.7em;
   text-decoration :none;
@@ -8,4 +12,15 @@ li {
 ul {
   padding: 0;
    list-style-type: none;
+}
+
+.dot {
+  height: 2em;
+  width: 2em;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  position:absolute;
+  top:1em;
+  right:5em;
 }
