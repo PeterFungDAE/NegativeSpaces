@@ -22,17 +22,15 @@ function getRandomInt(max) {
 // }
 
 function debug(time) {
-  clearTimeout(idleTimer);
+  clearInterval(idleTimer);
   if (idleState == true) {
     // document.body.style.backgroundColor = "white";
     var iddleDots = document.querySelectorAll("div.iddleDot");
     iddleDots.forEach(element => element.parentNode.removeChild(element));
   }
   idleState = false;
-  idleTimer = setTimeout(function() {
-
+  idleTimer = setInterval(function() {
     createRandomDot();
-
     idleState = true;
   }, time);
 }
@@ -54,9 +52,11 @@ function createRandomDot () {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-  debug(2000);
+
+  debug(500);
+
   document.body.onmousemove = event => {
-    debug(2000);
+  debug(500);
   }
 
 });
