@@ -18,12 +18,18 @@ body {
    font-family : Gaia;
 }
 
+.header {
+  height:10em;
+  position:relative;
+}
+
 
 .wrapper {
   overflow:hidden;
 }
 
 li {
+  position:relative;
   font-size:0.8em;
   text-decoration :none;
   list-style-type: none;
@@ -35,6 +41,10 @@ li {
   font-family: helvetica;
 }
 
+.menuItem:hover > .dotMenu {
+  opacity:1;
+}
+
 .menuItem
 
 ul {
@@ -43,13 +53,23 @@ ul {
 }
 
 .dot {
-  height: 2em;
-  width: 2em;
+  height: 1.7em;
+  width: 1.7em;
   background-color: black;
   border-radius: 50%;
   display: inline-block;
   position:absolute;
-  top:1em;
-  right:5em;
+}
+
+.dotMenu {
+  opacity:0;
+}
+
+.dotHeader {
+  top:4em;
+}
+
+.dot:hover{
+
 }
 
