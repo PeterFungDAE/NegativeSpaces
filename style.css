@@ -1,3 +1,25 @@
+@font-face {
+    font-family: 'tiempos-text';
+    src: url('Fonts/TiemposText-Regular.ttf') format('ttf'),
+         url('Fonts/TiemposText-Italic.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Gaia';
+    src: url('Fonts/RTGaiaSerif.otf') format('otf'),
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+  font-family:tiempos-text;
+}
+
+
 .wrapper {
   overflow:hidden;
 }
@@ -11,7 +33,8 @@ li {
 
 ul {
   padding: 0;
-   list-style-type: none;
+  list-style-type: none;
+  font-family : Gaia;
 }
 
 .dot {
