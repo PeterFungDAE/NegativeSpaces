@@ -25,10 +25,12 @@ body {
 }
 
 li {
-  font-size:0.7em;
+  font-size:0.8em;
   text-decoration :none;
   list-style-type: none;
-  padding:1em;
+  padding-left:1em;
+  line-height:110%;
+  margin:1em 0;
 }
 
 ul {
