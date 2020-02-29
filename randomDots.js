@@ -1,7 +1,7 @@
 var idleState = false;
 var idleWait = 2000;
 var idleTimer = null;
-var dots = [];
+// var dots = [];
 
 
 function getRandomInt(max) {
@@ -41,18 +41,18 @@ function storeRandPos () {
 //   dots = [];
 // }
 
-function randDots (time) {
-  clearTimeout(idleTimer);
-  if(idleState == true) {
-    drawDots();
-  }
-  idleState = false;
-  idleTimer = setTimeout(function() {
-    resetDots();
-    idleState = true;
-  }, time);
+// function randDots (time) {
+//   clearTimeout(idleTimer);
+//   if(idleState == true) {
+//     drawDots();
+//   }
+//   idleState = false;
+//   idleTimer = setTimeout(function() {
+//     resetDots();
+//     idleState = true;
+//   }, time);
 
-}
+// }
 
 function debug(time) {
   clearTimeout(idleTimer);
@@ -73,9 +73,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
   //var idleTimer = setInterval (randDots(), 50);
   // var debug = window.setInterval(console.log("hi"));
-  randDots(1000);
+  //randDots(1000);
   document.body.onmousemove = event => {
     //resetDots();
-    randDots(1000);
+  //randDots(1000);
+  }
+
+  document.body.onclick = event => {
+    console.log(event.clientX);
+    var elem = document.createElement("div");
+    var posXtest = 10;
+    elem.className = "dot";
+    elem.style.position = "fixed";
+    elem.style.top =  event.clientX + "px";
+
+    elem.style.left =  event.clientY + "px";
+    document.body.appendChild(elem);
+
   }
 });
