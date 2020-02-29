@@ -73,3 +73,8 @@ ul {
 
 }
 
+canvas {
+  overflow:hidden;
+  position:fixed;
+}
+
