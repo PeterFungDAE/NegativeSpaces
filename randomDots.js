@@ -1,5 +1,4 @@
 var idleState = false;
-var idleWait = 2000;
 var idleTimer = null;
 
 
@@ -7,24 +6,9 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
 
-
-// function randDots (time) {
-//   clearTimeout(idleTimer);
-//   if(idleState == true) {
-//     drawDots();
-//   }
-//   idleState = false;
-//   idleTimer = setTimeout(function() {
-//     resetDots();
-//     idleState = true;
-//   }, time);
-
-// }
-
-function debug(time) {
+function idleRandomDots(time) {
   clearInterval(idleTimer);
   if (idleState == true) {
-    // document.body.style.backgroundColor = "white";
     var iddleDots = document.querySelectorAll("div.iddleDot");
     iddleDots.forEach(element => element.parentNode.removeChild(element));
   }
@@ -36,9 +20,9 @@ function debug(time) {
 }
 
 function createRandomDot () {
+
   var xPos = getRandomInt(window.innerWidth);
   var yPos = getRandomInt(window.innerHeight);
-  console.log(xPos);
   var elem = document.createElement("div");
   elem.className = "dot iddleDot";
   elem.style.position = "fixed";
@@ -46,17 +30,11 @@ function createRandomDot () {
   elem.style.left =  yPos + "px";
   document.body.appendChild(elem);
 
-
 }
-
-
 
 document.addEventListener('DOMContentLoaded', function() {
 
-  debug(500);
-
-  document.body.onmousemove = event => {
-  debug(500);
-  }
+  idleRandomDots(1000);
+  document.body.onmousemove = event => {idleRandomDots(500);}
 
 });
