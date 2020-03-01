@@ -52,15 +52,13 @@ function displayAbout (){
     about.style.opacity = "0";
     dots.forEach(dot => dot.style.backgroundColor= "black");
     headerDotHover = false;
-
-    //circles = black
   });
 }
 
 
 document.addEventListener('DOMContentLoaded', function() {
   displayAbout();
-  idleRandomDots(2000);
-  document.body.onmousemove = event => {idleRandomDots(2000);}
+  idleRandomDots(900);
+  document.body.onmousemove = event => {idleRandomDots(900);}
 
 });

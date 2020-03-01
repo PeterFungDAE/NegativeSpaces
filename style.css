@@ -104,3 +104,15 @@ button {
   font-size:1.3em;
 }
 
+#menu {
+  position:fixed;
+  overflow-y:scroll;
+}
+
+.textItem {
+  position:fixed;
+  overflow-y:scroll;
+  height:75%;
+  right:7em;
+}
+
