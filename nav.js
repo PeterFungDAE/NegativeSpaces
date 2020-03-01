@@ -2,7 +2,7 @@
 
 
 function displayText(index) {
-  var textItems = document.querySelectorAll("p.textItem");
+  var textItems = document.querySelectorAll("div.textItem");
   textItems.forEach(element => element.classList.add("invisible"));
   textItems[index].classList.remove("invisible");
 }
