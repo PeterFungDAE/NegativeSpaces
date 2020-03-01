@@ -1,14 +1,16 @@
 @font-face {
-    font-family: Gaia;
-    src: url('RTGaiaSerif.otf'),
+    font-family: 'Gaia';
+    src: url('Fonts/rtgaiaserif-webfont.woff2') format('woff2'),
+         url('Fonts/rtgaiaserif-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
 
 @font-face {
-    font-family: 'CommonSans';
-    src: url('CommonSans-Regular.otf'),
+    font-family: 'commonSans';
+    src: url('Fonts/commonsans-regular-webfont.woff2') format('woff2'),
+         url('Fonts/commonsans-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -18,6 +20,10 @@ body {
    font-family : Gaia;
 }
 
+p {
+  line-height:1.3em;
+  font-size:0.9em;
+}
 .header {
   height:10em;
   position:relative;
@@ -38,7 +44,7 @@ li {
 }
 
 .menuItem:hover {
-  font-family: helvetica;
+  font-family: CommonSans;
 }
 
 .menuItem:hover > .dotMenu {
@@ -58,6 +64,7 @@ button {
   font: inherit;
   cursor: pointer;
   outline: inherit;
+  text-align:left;
 }
 
 .dot {
