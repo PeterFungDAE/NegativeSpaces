@@ -1,6 +1,3 @@
-
-
-
 function displayText(index) {
   var textItems = document.querySelectorAll("div.textItem");
   textItems.forEach(element => element.classList.add("invisible"));

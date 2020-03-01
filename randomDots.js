@@ -1,5 +1,6 @@
 var idleState = false;
 var idleTimer = null;
+var headerDotHover = false;
 
 
 function getRandomInt(max) {
@@ -28,13 +29,38 @@ function createRandomDot () {
   elem.style.position = "fixed";
   elem.style.top =  xPos + "px";
   elem.style.left =  yPos + "px";
+  if(headerDotHover) {
+    elem.style.backgroundColor =  "white";
+  } else {
+     elem.style.backgroundColor =  "black";
+  }
   document.body.appendChild(elem);
 
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+function displayAbout (){
+  var dotHeader = document.querySelectorAll("div.dotHeader");
+  var about = document.getElementById('about');
+  var dots = document.querySelectorAll("div.dot");
+  dotHeader[1].addEventListener("mouseover", function( event ) {
+    about.style.opacity = "1";
+    dots.forEach(dot => dot.style.backgroundColor= "white");
+    headerDotHover = true;
+  });
 
-  idleRandomDots(1000);
-  document.body.onmousemove = event => {idleRandomDots(500);}
+  dotHeader[1].addEventListener("mouseout", function( event ) {
+    about.style.opacity = "0";
+    dots.forEach(dot => dot.style.backgroundColor= "black");
+    headerDotHover = false;
+
+    //circles = black
+  });
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  displayAbout();
+  idleRandomDots(2000);
+  document.body.onmousemove = event => {idleRandomDots(2000);}
 
 });
