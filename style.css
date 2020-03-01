@@ -50,6 +50,16 @@ li {
   font-family : Gaia, Fallback, sans-serif;
 }
 
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
 .dot {
   height: 1.7em;
   width: 1.7em;
@@ -67,22 +77,7 @@ li {
   top:4em;
 }
 
-.dot:hover{
-
-}
-
-button {
-  background: none;
-  color: inherit;
-  border: none;
-  padding: 0;
-  font: inherit;
-  cursor: pointer;
-  outline: inherit;
-}
-
-canvas {
-  overflow:hidden;
-  position:fixed;
+.invisible {
+  display:none;
 }
 

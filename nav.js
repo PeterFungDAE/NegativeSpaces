@@ -1,12 +1,9 @@
-var espistemDesign_1 = null;
-var designInTheWorld_2 = null;
-var everyDayDesign_3 = null;
-var designPoetry_4 = null;
-var designDesigns_5 = null;
-var questionningDesign_6= null;
-var speculativeDesign_7= null;
 
 
-function displayText(button, p) {
 
+function displayText(index) {
+  var textItems = document.querySelectorAll("p.textItem");
+  textItems.forEach(element => element.classList.add("invisible"));
+  textItems[index].classList.remove("invisible");
 }
+
