@@ -44,6 +44,7 @@ function headerDotHoverAbout(dot) {
 
   dot.addEventListener("mouseover", function( event ) {
     about.style.opacity = "1";
+    document.body.style.backgroundColor = "black";
     dots.forEach(dot => dot.style.backgroundColor= "white");
     headerDotHover = true;
   });
@@ -51,6 +52,7 @@ function headerDotHoverAbout(dot) {
   dot.addEventListener("mouseout", function( event ) {
     about.style.opacity = "0";
     dots.forEach(dot => dot.style.backgroundColor= "black");
+    document.body.style.backgroundColor = "white";
     headerDotHover = false;
   });
 

@@ -25,7 +25,7 @@ p {
   line-height:1.3em;
   font-size:0.9em;
 }
-.header {
+#header {
   height:10em;
   position:relative;
 }
