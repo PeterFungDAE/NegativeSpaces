@@ -3,5 +3,24 @@ function displayText(index) {
   textItems.forEach(element => element.classList.add("invisible"));
   textItems[index].classList.remove("invisible");
   textItems[index].style.opacity = 1;
+
+  menuDots(index);
 }
 
+function menuDots (index) {
+  var menuItems = document.querySelectorAll("li");
+  var dotMenu = document.querySelectorAll("div.dotMenu");
+  menuItems.forEach(element => element.classList.remove("activeMenuItem"));
+  dotMenu.forEach(element => element.style.opacity="0");
+
+  menuItems[index].classList.add("activeMenuItem");
+  var activeDots = [];
+  var children = menuItems[index].childNodes;
+  for(var i =0; i < children.length; i++ ) {
+    if (children[i].className == "dot dotMenu") {
+       activeDots.push(children[i]);
+      }
+  }
+  activeDots.forEach(element => element.style.opacity="1");
+
+}

@@ -44,11 +44,11 @@ li {
   margin:0.7em 0;
 }
 
-.menuItem:hover {
+.activeMenuItem {
   font-family: CommonSans;
 }
 
-.menuItem:hover > .dotMenu {
+.activeDotMenu {
   opacity:1;
 }
 
