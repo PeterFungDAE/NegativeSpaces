@@ -23,7 +23,7 @@ function idleRandomDots(time) {
 function createRandomDot () {
 
   var xPos = getRandomInt(window.innerWidth);
-  var yPos = getRandomInt(window.innerHeight);
+  var yPos = getRandomInt(window.innerHeight*2);
   var elem = document.createElement("div");
   elem.className = "dot iddleDot";
   elem.style.position = "fixed";
@@ -58,7 +58,7 @@ function displayAbout (){
 
 document.addEventListener('DOMContentLoaded', function() {
   displayAbout();
-  idleRandomDots(900);
-  document.body.onmousemove = event => {idleRandomDots(900);}
+  idleRandomDots(1000);
+  document.body.onmousemove = event => {idleRandomDots(1000);}
 
 });
