@@ -38,21 +38,29 @@ function createRandomDot () {
 
 }
 
-function displayAbout (){
-  var dotHeader = document.querySelectorAll("div.dotHeader");
+function headerDotHoverAbout(dot) {
   var about = document.getElementById('about');
   var dots = document.querySelectorAll("div.dot");
-  dotHeader[1].addEventListener("mouseover", function( event ) {
+
+  dot.addEventListener("mouseover", function( event ) {
     about.style.opacity = "1";
     dots.forEach(dot => dot.style.backgroundColor= "white");
     headerDotHover = true;
   });
 
-  dotHeader[1].addEventListener("mouseout", function( event ) {
+  dot.addEventListener("mouseout", function( event ) {
     about.style.opacity = "0";
     dots.forEach(dot => dot.style.backgroundColor= "black");
     headerDotHover = false;
   });
+
+
+}
+
+function displayAbout (){
+  var dotHeader = document.querySelectorAll("div.dotHeader");
+  headerDotHoverAbout(dotHeader[0]);
+  headerDotHoverAbout(dotHeader[1]);
 }
 
 
