@@ -48,10 +48,6 @@ li {
   font-family: CommonSans;
 }
 
-.activeDotMenu {
-  opacity:1;
-}
-
 .menuItem ul {
   list-style-type: none;
   font-family : Gaia, Fallback, sans-serif;
@@ -81,6 +77,13 @@ button {
 .dotMenu {
   opacity:0;
 }
+
+.menuItem:hover {
+  font-family: CommonSans;
+}
+/*.menuItem:hover > .dotMenu {
+  opacity:1;
+}*/
 
 .dotHeader {
   top:4em;
