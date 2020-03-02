@@ -48,14 +48,12 @@ function headerDotHoverAbout(dot) {
     dots.forEach(dot => dot.style.backgroundColor= "white");
     headerDotHover = true;
   });
-
   dot.addEventListener("mouseout", function( event ) {
     about.style.opacity = "0";
     dots.forEach(dot => dot.style.backgroundColor= "black");
     document.body.style.backgroundColor = "white";
     headerDotHover = false;
   });
-
 
 }
 
@@ -65,10 +63,9 @@ function displayAbout (){
   headerDotHoverAbout(dotHeader[1]);
 }
 
-
 document.addEventListener('DOMContentLoaded', function() {
   displayAbout();
-  idleRandomDots(1000);
-  document.body.onmousemove = event => {idleRandomDots(1000);}
+  // idleRandomDots(1000);
+  // document.body.onmousemove = event => {idleRandomDots(1000);}
 
 });

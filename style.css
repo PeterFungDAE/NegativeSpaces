@@ -112,6 +112,20 @@ button {
  /* overflow-y:scroll;*/
 }
 
+#noteContainer {
+  position:fixed;
+  left:22em;
+  height:75%;
+  width:100%;
+/*  border-color: red;
+  border-style:dotted;*/
+  font-family:CommonSans;
+}
+
+#noteContainer:hover {
+  cursor:text;
+}
+
 .textItem {
   position:fixed;
   overflow-y:scroll;
@@ -119,3 +133,6 @@ button {
   right:7em;
 }
 
+textarea {
+  position:relative;
+}
