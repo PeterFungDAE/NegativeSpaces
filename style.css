@@ -130,6 +130,11 @@ button {
   cursor:text;
 }
 
+#saveBtn {
+  position:fixed;
+  bottom:5em;
+  left:8em;
+}
 .textItem {
   position:fixed;
   overflow-y:scroll;
@@ -145,4 +150,13 @@ input {
   border:dotted;
   background:white;
   border-width: 0.1em;
+}
+
+.noteP {
+   font-family:CommonSans;
+   position:fixed;
+   top:10em;
+   left:22em;
+   padding:2em;
+   width:30%;
 }

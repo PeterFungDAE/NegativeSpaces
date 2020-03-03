@@ -10,10 +10,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       });
     });
-
+    document.addEventListener('scroll', function(){
+      scrollNote();
+    });
 });
 
 function createTextArea() {
+  //create box for user text Input
   var headerY =  document.getElementById('header').clientHeight;
   var input = document.createElement('textarea');
   input.cols = 60;
@@ -26,24 +29,33 @@ function createTextArea() {
   document.getElementById("noteContainer").appendChild(input);
   input.appendChild(button);
   textAreaActive = true;
+  document.getElementById("saveBtn").classList.remove('invisible');
 }
 
 function saveEdits() {
-var noteP = document.createElement("p");
-var activeTextItem = document.getElementsByClassName("textItem visible");
-var textInput = document.getElementsByClassName("currentTextarea");
-noteP.innerHTML = textInput[0].value;
-activeTextItem[0].appendChild(noteP);
-  //activeP = p without invisible
+  var noteP = document.createElement("p");
+  noteP.className = "noteP";
+  var activeTextItem = document.getElementsByClassName("textItem visible");
+  var textInput = document.getElementsByClassName("currentTextarea");
+  noteP.innerHTML = textInput[0].value;
+  noteP.style.marginTop = textInput[0].style.marginTop;
+  activeTextItem[0].appendChild(noteP);
+  document.getElementById("saveBtn").classList.add('invisible');
+  textInput[0].parentNode.removeChild(textInput[0]);
+  textAreaActive = false;
 
 }
 
-function checkEdits() {
-
-//find out if the user has previously saved edits
-if(localStorage.userEdits!=null)
-document.getElementById("edit").innerHTML = localStorage.userEdits;
+function scrollNote() {
+  var addedNotes =
+  document.getElementsById('noteContainer').style.offsetTop = window.scrollY;
 }
+// function checkEdits() {
+
+// //find out if the user has previously saved edits
+// if(localStorage.userEdits!=null)
+// document.getElementById("edit").innerHTML = localStorage.userEdits;
+// }
 
 //get the editable element
 // var editElem = document.getElementById("edit");
@@ -57,19 +69,4 @@ document.getElementById("edit").innerHTML = localStorage.userEdits;
 //write a confirmation to the user
 // document.getElementById("update").innerHTML="Edits saved!";
 
-//on mouseClicked in editor col => create textInput
-// function opentextarea() {
-//     var input = document.createElement('textarea');
-//     input.name = 'post';
-//     input.maxLength = 5000;
-//     input.cols = 80;
-//     input.rows = 40;
-//     input.className = 'myCustomTextarea';
-//     var button = document.createElement('button');
-//     var oBody = document.getElementById("body");
-//     while (oBody.childNodes.length > 0) {
-//         oBody.removeChild(oBody.childNodes[0]);
-//     }
-//     oBody.appendChild(input);
-//     oBody.appendChild(button);
-//  }
+
