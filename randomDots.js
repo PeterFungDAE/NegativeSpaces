@@ -34,8 +34,8 @@ function createRandomDot () {
   } else {
      elem.style.backgroundColor =  "black";
   }
-  document.body.appendChild(elem);
 
+  document.body.appendChild(elem);
 }
 
 function headerDotHoverAbout(dot) {
@@ -65,7 +65,7 @@ function displayAbout (){
 
 document.addEventListener('DOMContentLoaded', function() {
   displayAbout();
-  // idleRandomDots(1000);
-  // document.body.onmousemove = event => {idleRandomDots(1000);}
+  idleRandomDots(1000);
+  document.body.onmousemove = event => {idleRandomDots(1000);}
 
 });

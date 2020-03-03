@@ -1,17 +1,18 @@
 var textAreaActive = false;
 
 document.addEventListener('DOMContentLoaded', function() {
+  var activeTextItem = document.getElementsByClassName("textItem visible");
     noteContainer = document.getElementById("noteContainer");
     noteContainer.addEventListener("mouseover", function( event ) {
       noteContainer.addEventListener("click",function( event ) {
         if(textAreaActive == false) {
           createTextArea();
-          console.log("it works");
         }
       });
     });
-    document.addEventListener('scroll', function(){
-      scrollNote();
+    activeTextItem[0].addEventListener('scroll', function(container){
+      // console.log(activeTextItem[0].scrollTop);
+      scrollNote(activeTextItem[0]);
     });
 });
 
@@ -39,16 +40,30 @@ function saveEdits() {
   var textInput = document.getElementsByClassName("currentTextarea");
   noteP.innerHTML = textInput[0].value;
   noteP.style.marginTop = textInput[0].style.marginTop;
-  activeTextItem[0].appendChild(noteP);
+  var children = activeTextItem[0].children;
+  for(var i =0; i < children.length; i++ ) {
+    if (children[i].className == "addedNotes") {
+         children[i].appendChild(noteP);
+      }
+  }
   document.getElementById("saveBtn").classList.add('invisible');
   textInput[0].parentNode.removeChild(textInput[0]);
   textAreaActive = false;
 
 }
 
-function scrollNote() {
-  var addedNotes =
-  document.getElementsById('noteContainer').style.offsetTop = window.scrollY;
+function scrollNote(container) {
+  var addedNotes = document.getElementsByClassName("noteP");
+  console.log(container.scrollTop);
+  if(addedNotes.length != 0) {
+     for(var i = 0; i < addedNotes.length; i++) {
+        addedNotes[i].scrollTop = container.scrollTop;
+      console.log(addedNotes[i].scrollTop);
+     }
+    // addedNotes.forEach(e => e.scrollTop = container.scrollTop);
+  }
+  //
+
 }
 // function checkEdits() {
 
