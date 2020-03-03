@@ -9,7 +9,7 @@
   <script type="text/javascript" src="nav.js"></script>
   <script type="text/javascript" src="textInput.js"></script>
 </head>
-<body>
+<body onload="checkEdits()">
   <div class="wrapper">
     <div id ="header" class="row">
       <div class="col-6"></div>
@@ -96,8 +96,9 @@
       </div>
       <div class="col-3" id="noteContainer">
         <!-- <textarea name="noteEditor" id="textInput" cols="50" rows="21" placeholder="typeSomething"></textarea> -->
+        <input type="button" value="save my edits" onclick="saveEdits()"/>
       </div>
-      <div class= "col-6 textItem">
+      <div class= "col-6 textItem visible">
         <p>
          <!--  Epistemological Design and Design Epistemology <br> -->
 

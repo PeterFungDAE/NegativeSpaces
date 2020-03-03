@@ -1,8 +1,9 @@
 function displayText(index) {
   var textItems = document.querySelectorAll("div.textItem");
   textItems.forEach(element => element.classList.add("invisible"));
+  textItems.forEach(element => element.classList.remove("visible"));
   textItems[index].classList.remove("invisible");
-  textItems[index].style.opacity = 1;
+  textItems[index].classList.add("visible");
 
   menuDots(index);
 }
