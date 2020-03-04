@@ -1,7 +1,25 @@
 @font-face {
-    font-family: 'Gaia';
-    src: url('Fonts/rtgaiaserif-webfont.woff2') format('woff2'),
-         url('Fonts/rtgaiaserif-webfont.woff') format('woff');
+    font-family: 'hk_serifregular';
+    src: url('Fonts/hkserif-regular-webfont.woff2') format('woff2'),
+         url('Fonts/hkserif-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'hk_serifbold';
+    src: url('Fonts/hkserif-bold-webfont.woff2') format('woff2'),
+         url('Fonts/hkserif-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'hk_serifitalic';
+    src: url('Fonts/hkserif-italic-webfont.woff2') format('woff2'),
+         url('Fonts/hkserif-italic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -17,7 +35,7 @@
 }
 
 body {
-  font-family : Gaia;
+  font-family : hk_serifregular;
   color:black;
   background-color: #EFEEF0;
 }
@@ -66,6 +84,8 @@ button {
   text-align:left;
 }
 
+button:focus {outline:0;}
+
 .dot {
   height: 1.7em;
   width: 1.7em;
@@ -111,15 +131,21 @@ button {
 
 #menu {
   position:fixed;
-  /*z-index:500;*/
+  height:100%;
+  width:100%;
   overflow-y:scroll;
 }
+
+#menu::-webkit-scrollbar {
+  display: none;
+}
+
 
 #noteContainer {
   position:fixed;
   left:22em;
-  top:10em;
-  height:75%;
+  top:0;
+  height:100%;
   width:100%;
   font-family:CommonSans;
 }

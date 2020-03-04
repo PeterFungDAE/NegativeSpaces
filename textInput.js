@@ -26,7 +26,7 @@ function createTextArea() {
   var button = document.createElement('button');
   button.innerHTML = 'Submit';
   button.style.position = "absolute";
-  input.style.marginTop = (event.clientY - headerY - 50)+ "px";
+  input.style.marginTop = (event.clientY - 50)+ "px";
   document.getElementById("noteContainer").appendChild(input);
   input.appendChild(button);
   textAreaActive = true;
