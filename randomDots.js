@@ -43,13 +43,13 @@ function headerDotHoverAbout(dot) {
   var dots = document.querySelectorAll("div.dot");
 
   dot.addEventListener("mouseover", function( event ) {
-    about.style.opacity = "1";
+    about.style.display = "block";
     document.body.style.backgroundColor = "black";
     dots.forEach(dot => dot.style.backgroundColor= "white");
     headerDotHover = true;
   });
   dot.addEventListener("mouseout", function( event ) {
-    about.style.opacity = "0";
+    about.style.display = "none";
     dots.forEach(dot => dot.style.backgroundColor= "black");
     document.body.style.backgroundColor = "white";
     headerDotHover = false;
@@ -65,7 +65,7 @@ function displayAbout (){
 
 document.addEventListener('DOMContentLoaded', function() {
   displayAbout();
-  idleRandomDots(1000);
-  document.body.onmousemove = event => {idleRandomDots(1000);}
+  idleRandomDots(500);
+  document.body.onmousemove = event => {idleRandomDots(500);}
 
 });

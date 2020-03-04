@@ -19,16 +19,17 @@
 body {
   font-family : Gaia;
   color:black;
+  background-color: #EFEEF0;
 }
 
 p {
   line-height:1.3em;
-  font-size:0.9em;
+  font-size:1em;
 }
 #header {
-  height:10em;
   position:fixed;
   right:0;
+  z-index:1;
 }
 
 
@@ -38,10 +39,10 @@ p {
 
 li {
   position:relative;
-  font-size:0.8em;
+  font-size:1em;
   text-decoration :none;
   list-style-type: none;
-  line-height:100%;
+  line-height:1.3em;
   margin:0.7em 0;
 }
 
@@ -82,9 +83,6 @@ button {
 .menuItem:hover {
   font-family: CommonSans;
 }
-/*.menuItem:hover > .dotMenu {
-  opacity:1;
-}*/
 
 .dotHeader {
   top:4em;
@@ -100,12 +98,11 @@ button {
 
 #about {
   position:fixed;
- /* padding-top:8em;*/
   top:8em;
-  left:0;
-  opacity:0;
+  right:10em;
+  display:none;
   background-color: black;
-  width:100%;
+  width:40%;
   height:100%;
   color:white;
   font-family : CommonSans;
@@ -114,18 +111,16 @@ button {
 
 #menu {
   position:fixed;
-  z-index:500;
- /* overflow-y:scroll;*/
+  /*z-index:500;*/
+  overflow-y:scroll;
 }
 
 #noteContainer {
   position:fixed;
   left:22em;
-   top:10em;
+  top:10em;
   height:75%;
   width:100%;
-/*  border-color: red;
-  border-style:dotted;*/
   font-family:CommonSans;
 }
 
@@ -141,9 +136,12 @@ button {
 .textItem {
   position:fixed;
   overflow-y:scroll;
-  height:75%;
+  height:100%;
   right:7em;
-  top:10em;
+}
+
+.firstP {
+  margin-top:10em;
 }
 
 textarea {
