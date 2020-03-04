@@ -54,11 +54,10 @@ function saveEdits() {
 
 function scrollNote(container) {
   var addedNotes = document.getElementsByClassName("noteP");
-  console.log(container.scrollTop);
   if(addedNotes.length != 0) {
      for(var i = 0; i < addedNotes.length; i++) {
         addedNotes[i].scrollTop = container.scrollTop;
-      console.log(addedNotes[i].scrollTop);
+
      }
     // addedNotes.forEach(e => e.scrollTop = container.scrollTop);
   }

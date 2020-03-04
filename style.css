@@ -27,7 +27,8 @@ p {
 }
 #header {
   height:10em;
-  position:relative;
+  position:fixed;
+  right:0;
 }
 
 
@@ -113,12 +114,14 @@ button {
 
 #menu {
   position:fixed;
+  z-index:500;
  /* overflow-y:scroll;*/
 }
 
 #noteContainer {
   position:fixed;
   left:22em;
+   top:10em;
   height:75%;
   width:100%;
 /*  border-color: red;
@@ -140,6 +143,7 @@ button {
   overflow-y:scroll;
   height:75%;
   right:7em;
+  top:10em;
 }
 
 textarea {
