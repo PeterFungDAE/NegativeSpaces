@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
     activeTextItem[0].addEventListener('scroll', function(container){
-      // console.log(activeTextItem[0].scrollTop);
       scrollNote(activeTextItem[0]);
     });
 });
@@ -26,7 +25,7 @@ function createTextArea() {
   var button = document.createElement('button');
   button.innerHTML = 'Submit';
   button.style.position = "absolute";
-  input.style.marginTop = (event.clientY - 50)+ "px";
+  input.style.marginTop = (event.clientY)+ "px";
   document.getElementById("noteContainer").appendChild(input);
   input.appendChild(button);
   textAreaActive = true;
@@ -56,10 +55,8 @@ function scrollNote(container) {
   var addedNotes = document.getElementsByClassName("noteP");
   if(addedNotes.length != 0) {
      for(var i = 0; i < addedNotes.length; i++) {
-        addedNotes[i].scrollTop = container.scrollTop;
-
+        addedNotes[i].style.top= -container.scrollTop + "px";
      }
-    // addedNotes.forEach(e => e.scrollTop = container.scrollTop);
   }
 }
 
