@@ -37,7 +37,7 @@
 body {
   font-family : hk_serifregular;
   color:black;
-  background-color: #EFEEF0;
+  background-color: #cfd6de;
 }
 
 p {
@@ -130,6 +130,7 @@ button:focus {outline:0;}
   height:100%;
   color:white;
   font-family : hk_serifregular;
+  color: #cfd6de;
   /*font-size:1.3em;*/
 }
 
@@ -162,7 +163,7 @@ button:focus {outline:0;}
   position:fixed;
   bottom:5em;
   left:8em;
-  background-color:#EFEEF0;
+  background-color:#cfd6de;
 }
 .textItem {
   position:fixed;
@@ -207,7 +208,7 @@ span:hover > img {
 }
 
 .unfinished {
-  color:#cfd6de;
+  color:#a0a8ab;
 }
 
 .italic {

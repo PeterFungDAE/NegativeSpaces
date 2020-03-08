@@ -30,7 +30,7 @@ function createRandomDot () {
   elem.style.top =  xPos + "px";
   elem.style.left =  yPos + "px";
   if(headerDotHover) {
-    elem.style.backgroundColor =  "white";
+    elem.style.backgroundColor =  "#cfd6de";
   } else {
      elem.style.backgroundColor =  "black";
   }
@@ -45,13 +45,13 @@ function headerDotHoverAbout(dot) {
   dot.addEventListener("mouseover", function( event ) {
     about.style.display = "block";
     document.body.style.backgroundColor = "black";
-    dots.forEach(dot => dot.style.backgroundColor= "white");
+    dots.forEach(dot => dot.style.backgroundColor= "#cfd6de");
     headerDotHover = true;
   });
   dot.addEventListener("mouseout", function( event ) {
     about.style.display = "none";
     dots.forEach(dot => dot.style.backgroundColor= "black");
-    document.body.style.backgroundColor = "white";
+    document.body.style.backgroundColor = "#cfd6de";
     headerDotHover = false;
   });
 
