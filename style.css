@@ -162,7 +162,7 @@ button:focus {outline:0;}
 #saveBtn {
   position:fixed;
   bottom:5em;
-  left:8em;
+  left:12em;
   background-color:#cfd6de;
 }
 .textItem {

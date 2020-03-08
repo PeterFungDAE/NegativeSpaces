@@ -29,22 +29,29 @@ function displayText(index) {
 // }
 
 function loopScrollMenu () {
+  // Container element which has a scrollbar c
   var menu = document.getElementById('menu');
-  var menuItems = document.querySelectorAll('li.menuItem');
 
-  // const clone = container.cloneNode(true);
-  // const parent = container.parentElement
+  // Child element which is taller than the container e
+  var loopItem = document.querySelector('div.loopItem');
 
-  // parent.insertBefore(clone, container.nextSibling);
+  // The point at which the page will loop when scrolling down
+  var loopPoint = menu.clientHeight ;
+  var loopPointDown = loopItem.clientHeight - menu.clientHeight;
 
   menu.addEventListener('scroll', e => {
-    //detect top element
-    console.log(menuItems[0].clientY);
-    //menu.scrollTop = amount of scroll
-    // if (Math.round(clone.getBoundingClientRect().bottom) <= window.innerHeight + 1) {
-    //         window.scroll({ top: (clone.getBoundingClientRect().top + window.innerHeight)});
-    //     }
-
+    console.log("scrollTop :" + menu.scrollTop + "menuClientHeiht :" + loopPoint);
+     // If the new scroll position matches our loop point
+    if (menu.scrollTop === loopPoint) {
+        // Scroll to (almost) the the top ('0' would be the top; we do this so we don't loop back again instantly)
+        menu.scrollTop = 1;
+    }  // Otherwise, if the new scroll position = the top of the element
+    else if (menu.scrollTop === 0) {
+        // Scroll to (almost) the bottom, we can use (our loop point - 1)
+        menu.scrollTop = loopPoint - 1;
+    } else if (menu.scrollTop > loopPointDown -1) {
+      menu.scrollTop = 1;
+    }
 
   });
 }
