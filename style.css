@@ -55,13 +55,17 @@ p {
   overflow:hidden;
 }
 
-li {
+  li {
   position:relative;
   font-size:1em;
   text-decoration :none;
   list-style-type: none;
   line-height:1.3em;
   margin:0.7em 0;
+}
+
+.underline {
+  text-decoration:underline;
 }
 
 .activeMenuItem {
@@ -189,6 +193,17 @@ input {
    left:22em;
    padding:2em;
    width:30%;
+}
+
+#images {
+  position:fixed;
+  right:5em;
+  margin-top:10em;
+  /*z-index:300;*/
+}
+
+#images img {
+  display : none;
 }
 
 
