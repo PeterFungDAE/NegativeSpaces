@@ -129,8 +129,8 @@ button:focus {outline:0;}
   width:40%;
   height:100%;
   color:white;
-  font-family : CommonSans;
-  font-size:1.3em;
+  font-family : hk_serifregular;
+  /*font-size:1.3em;*/
 }
 
 #menu {
@@ -178,6 +178,9 @@ button:focus {outline:0;}
 textarea {
   position:relative;
   background-color:#EFEEF0;
+  border-style:none;
+  padding-left:1em;
+  padding-top:1.9em;
 }
 
 input {
@@ -213,6 +216,11 @@ span:hover > img {
 
 .ref {
   padding-left:0;
+  font-size:0.8em;
+  margin-top : 7em;
+  padding-top : 3em;
+  padding-bottom:2em;
+  border-top: 1px solid black;
 }
 
 img {
@@ -220,4 +228,7 @@ img {
   width:30em;
   top:13em;
   right:13em;
+/*  border-style: solid;
+  border-width:0.5;
+  border-color:black;*/
 }

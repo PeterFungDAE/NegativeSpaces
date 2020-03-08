@@ -24,7 +24,7 @@ function createTextArea() {
   //create box for user text Input
   var headerY =  document.getElementById('header').clientHeight;
   var input = document.createElement('textarea');
-  input.cols = 60;
+  input.cols = 30;
   input.rows = 5;
   input.className = 'currentTextarea';
   var button = document.createElement('button');
