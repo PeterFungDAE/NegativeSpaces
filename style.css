@@ -208,8 +208,9 @@ input {
 
 .textItem img {
   display:none;
+
 }
-span img:hover {
+span:hover > img {
     display:block;
 }
 
