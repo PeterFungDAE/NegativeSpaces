@@ -1,4 +1,5 @@
 var textAreaActive = false;
+var textItems = document.querySelectorAll("div.textItem");
 
 document.addEventListener('DOMContentLoaded', function() {
   var activeTextItem = document.getElementsByClassName("textItem visible");
@@ -12,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     for(var i = 0; i <textItems.length; i++) {
-        addedNotes[i].style.top = -container.scrollTop + "px";
+        addedNotes[i].style.top = - container.scrollTop + "px";
      }
     activeTextItem[0].addEventListener('scroll', function(container){
       scrollNote(activeTextItem[0]);

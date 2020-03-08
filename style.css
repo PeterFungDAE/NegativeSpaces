@@ -202,8 +202,15 @@ input {
   /*z-index:300;*/
 }
 
-#images img {
+#images span {
   display : none;
+}
+
+.textItem img {
+  display:none;
+}
+span img:hover {
+    display:block;
 }
 
 
