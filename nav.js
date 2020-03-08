@@ -33,14 +33,13 @@ function loopScrollMenu () {
   var menu = document.getElementById('menu');
 
   // Child element which is taller than the container e
-  var loopItem = document.querySelector('div.loopItem');
+  var loopItem = document.getElementsByClassName('div.loopItem');
 
   // The point at which the page will loop when scrolling down
   var loopPoint = menu.clientHeight ;
   var loopPointDown = loopItem.clientHeight - menu.clientHeight;
 
   menu.addEventListener('scroll', e => {
-    console.log("scrollTop :" + menu.scrollTop + "menuClientHeiht :" + loopPoint);
      // If the new scroll position matches our loop point
     if (menu.scrollTop === loopPoint) {
         // Scroll to (almost) the the top ('0' would be the top; we do this so we don't loop back again instantly)

@@ -47,6 +47,7 @@ function headerDotHoverAbout(dot) {
     document.body.style.backgroundColor = "black";
     dots.forEach(dot => dot.style.backgroundColor= "#cfd6de");
     headerDotHover = true;
+
   });
   dot.addEventListener("mouseout", function( event ) {
     about.style.display = "none";
