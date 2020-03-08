@@ -13,6 +13,7 @@ function idleRandomDots(time) {
     var iddleDots = document.querySelectorAll("div.iddleDot");
     iddleDots.forEach(element => element.parentNode.removeChild(element));
   }
+
   idleState = false;
   idleTimer = setInterval(function() {
     createRandomDot();
@@ -31,11 +32,12 @@ function createRandomDot () {
   elem.style.left =  yPos + "px";
   if(headerDotHover) {
     elem.style.backgroundColor =  "#cfd6de";
+
   } else {
      elem.style.backgroundColor =  "black";
+     document.body.appendChild(elem);
   }
 
-  document.body.appendChild(elem);
 }
 
 function headerDotHoverAbout(dot) {
@@ -47,6 +49,7 @@ function headerDotHoverAbout(dot) {
     document.body.style.backgroundColor = "black";
     dots.forEach(dot => dot.style.backgroundColor= "#cfd6de");
     headerDotHover = true;
+    aboutActive = true;
 
   });
   dot.addEventListener("mouseout", function( event ) {
@@ -54,6 +57,7 @@ function headerDotHoverAbout(dot) {
     dots.forEach(dot => dot.style.backgroundColor= "black");
     document.body.style.backgroundColor = "#cfd6de";
     headerDotHover = false;
+    aboutActive = false;
   });
 
 }

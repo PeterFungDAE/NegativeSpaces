@@ -1,4 +1,5 @@
 var textAreaActive = false;
+var aboutActive = false;
 var textItems = document.querySelectorAll("div.textItem");
 
 document.addEventListener('DOMContentLoaded', function() {
