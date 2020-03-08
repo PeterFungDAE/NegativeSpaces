@@ -199,6 +199,7 @@ input {
    width:30%;
 }
 
+
 .textItem img {
   display:none;
 
@@ -229,7 +230,7 @@ img {
   width:30em;
   top:13em;
   right:13em;
-/*  border-style: solid;
+  border-style: solid;
   border-width:0.5;
-  border-color:black;*/
+  border-color:black;
 }

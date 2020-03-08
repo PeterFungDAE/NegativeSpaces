@@ -19,7 +19,6 @@ function displayText(index) {
 //     // here there is the right couple a/a img text
 
 //       textBeingHover.addEventListener("mouseover", function( event ) {
-//          console.log(chr);
 //         img.style.display = "block";
 //       });
 //      textBeingHover.addEventListener("mouseout", function( event ) {
@@ -29,19 +28,30 @@ function displayText(index) {
 
 // }
 
-// function displayImage(class) {
-//   var textImgPair = document.querySelectorAll(`span.${class}`);
-//   var img = textImgPair[0];
-//   return img
-// }
+function loopScrollMenu () {
+  var menu = document.getElementById('menu');
+  var menuItems = document.querySelectorAll('li.menuItem');
+
+  // const clone = container.cloneNode(true);
+  // const parent = container.parentElement
+
+  // parent.insertBefore(clone, container.nextSibling);
+
+  menu.addEventListener('scroll', e => {
+    //detect top element
+    console.log(menuItems[0].clientY);
+    //menu.scrollTop = amount of scroll
+    // if (Math.round(clone.getBoundingClientRect().bottom) <= window.innerHeight + 1) {
+    //         window.scroll({ top: (clone.getBoundingClientRect().top + window.innerHeight)});
+    //     }
 
 
-// document.addEventListener('DOMContentLoaded', function() {
-//   imagesOnUnderlineTextHover();
-// });
+  });
+}
+
 
 function menuDots (index) {
-  var menuItems = document.querySelectorAll("li");
+  var menuItems = document.querySelectorAll("li.menuItem");
   var dotMenu = document.querySelectorAll("div.dotMenu");
   menuItems.forEach(element => element.classList.remove("activeMenuItem"));
   dotMenu.forEach(element => element.style.opacity="0");

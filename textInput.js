@@ -2,7 +2,11 @@ var textAreaActive = false;
 var textItems = document.querySelectorAll("div.textItem");
 
 document.addEventListener('DOMContentLoaded', function() {
+  displayAbout();
+  idleRandomDots(500);
+  document.body.onmousemove = event => {idleRandomDots(500);}
   var activeTextItem = document.getElementsByClassName("textItem visible");
+  loopScrollMenu();
     noteContainer = document.getElementById("noteContainer");
     noteContainer.addEventListener("mouseover", function( event ) {
       noteContainer.addEventListener("click",function( event ) {
@@ -11,13 +15,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       });
     });
+    document.body.addEventListener("click", e => {
+        activeTextItem[0].addEventListener('scroll', function(container){
+        scrollNote(activeTextItem[0]);
+      });
 
-    for(var i = 0; i <textItems.length; i++) {
-        addedNotes[i].style.top = - container.scrollTop + "px";
-     }
-    activeTextItem[0].addEventListener('scroll', function(container){
-      scrollNote(activeTextItem[0]);
-    });
+    })
 });
 
 function createTextArea() {

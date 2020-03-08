@@ -63,9 +63,3 @@ function displayAbout (){
   headerDotHoverAbout(dotHeader[1]);
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  displayAbout();
-  idleRandomDots(500);
-  document.body.onmousemove = event => {idleRandomDots(500);}
-
-});
