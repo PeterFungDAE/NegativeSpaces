@@ -195,23 +195,16 @@ input {
    width:30%;
 }
 
-#images {
-  position:fixed;
-  right:5em;
-  margin-top:10em;
-  /*z-index:300;*/
-}
-
-#images span {
-  display : none;
-}
-
 .textItem img {
   display:none;
 
 }
 span:hover > img {
     display:block;
+}
+
+.unfinished {
+  color:#cfd6de;
 }
 
 
