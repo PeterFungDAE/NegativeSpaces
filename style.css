@@ -215,3 +215,9 @@ span:hover > img {
   padding-left:0;
 }
 
+img {
+  position:fixed;
+  width:30em;
+  top:13em;
+  right:13em;
+}
