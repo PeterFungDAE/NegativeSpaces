@@ -145,6 +145,10 @@ button:focus {outline:0;}
   display: none;
 }
 
+.textItem::-webkit-scrollbar {
+  display: none;
+}
+
 
 #noteContainer {
   position:fixed;
