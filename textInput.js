@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
   idleRandomDots(500);
   document.body.onmousemove = event => {idleRandomDots(500);}
   var activeTextItem = document.getElementsByClassName("textItem visible");
-  loopScrollMenu();
+  // loopScrollMenu();
     noteContainer = document.getElementById("noteContainer");
     noteContainer.addEventListener("mouseover", function( event ) {
       noteContainer.addEventListener("click",function( event ) {

@@ -28,32 +28,32 @@ function displayText(index) {
 
 // }
 
-function loopScrollMenu () {
-  // Container element which has a scrollbar c
-  var menu = document.getElementById('menu');
+// function loopScrollMenu () {
+//   // Container element which has a scrollbar c
+//   var menu = document.getElementById('menu');
 
-  // Child element which is taller than the container e
-  var loopItem = document.getElementsByClassName('div.loopItem');
+//   // Child element which is taller than the container e
+//   var loopItem = document.getElementsByClassName('div.loopItem');
 
-  // The point at which the page will loop when scrolling down
-  var loopPoint = menu.clientHeight ;
-  var loopPointDown = loopItem.clientHeight - menu.clientHeight;
+//   // The point at which the page will loop when scrolling down
+//   var loopPoint = menu.clientHeight ;
+//   var loopPointDown = loopItem.clientHeight - menu.clientHeight;
 
-  menu.addEventListener('scroll', e => {
-     // If the new scroll position matches our loop point
-    if (menu.scrollTop === loopPoint) {
-        // Scroll to (almost) the the top ('0' would be the top; we do this so we don't loop back again instantly)
-        menu.scrollTop = 1;
-    }  // Otherwise, if the new scroll position = the top of the element
-    else if (menu.scrollTop === 0) {
-        // Scroll to (almost) the bottom, we can use (our loop point - 1)
-        menu.scrollTop = loopPoint - 1;
-    } else if (menu.scrollTop > loopPointDown -1) {
-      menu.scrollTop = 1;
-    }
+//   menu.addEventListener('scroll', e => {
+//      // If the new scroll position matches our loop point
+//     if (menu.scrollTop === loopPoint) {
+//         // Scroll to (almost) the the top ('0' would be the top; we do this so we don't loop back again instantly)
+//         menu.scrollTop = 1;
+//     }  // Otherwise, if the new scroll position = the top of the element
+//     else if (menu.scrollTop === 0) {
+//         // Scroll to (almost) the bottom, we can use (our loop point - 1)
+//         menu.scrollTop = loopPoint - 1;
+//     } else if (menu.scrollTop > loopPointDown -1) {
+//       menu.scrollTop = 1;
+//     }
 
-  });
-}
+//   });
+// }
 
 
 function menuDots (index) {
