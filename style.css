@@ -109,6 +109,11 @@ button:focus {outline:0;}
   opacity:0;
 }
 
+.intext {
+  text-align:right;
+  width:60%;
+}
+
 .menuItem:hover {
   font-family: CommonSans;
 }
