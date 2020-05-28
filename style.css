@@ -110,8 +110,9 @@ button:focus {outline:0;}
 }
 
 .intext {
-  text-align:right;
-  width:60%;
+  text-align:left;
+  width:75%;
+  margin-left:10%;
 }
 
 .menuItem:hover {
