@@ -182,6 +182,14 @@ button:focus {outline:0;}
   right:7em;
 }
 
+.headerNotes {
+  text-align:left;
+  width:100%;
+  font-size:0.8em;
+  margin-top : 10em;
+  padding-top : 3em;
+}
+
 .firstP {
   margin-top:10em;
 }
