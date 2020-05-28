@@ -40,6 +40,11 @@ body {
   background-color: #cfd6de;
 }
 
+a:link, a:visited, a:active, a:hover {
+  color:black;
+  font-style:underline;
+}
+
 p {
   line-height:1.3em;
   font-size:1em;
