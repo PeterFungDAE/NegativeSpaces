@@ -115,15 +115,6 @@ function displayAbout() {
 
 
 
-// body.addEventListener("click", function(event) {
-//     about.style.display = "none";
-//     unfinished.style.color = " #a0a8ab";
-//     dots.forEach(dot => dot.style.backgroundColor = "black");
-//     document.body.style.backgroundColor = "#cfd6de";
-//     headerDotHover = false;
-//     aboutActive = false;
-// });
-
 //}
 
 // function clickdotheader() {
