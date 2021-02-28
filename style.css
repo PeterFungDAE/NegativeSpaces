@@ -1,281 +1,304 @@
 @font-face {
     font-family: 'hk_serifregular';
-    src: url('Fonts/hkserif-regular-webfont.woff2') format('woff2'),
-         url('Fonts/hkserif-regular-webfont.woff') format('woff');
+    src: url('Fonts/hkserif-regular-webfont.woff2') format('woff2'), url('Fonts/hkserif-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
     font-family: 'hk_serifbold';
-    src: url('Fonts/hkserif-bold-webfont.woff2') format('woff2'),
-         url('Fonts/hkserif-bold-webfont.woff') format('woff');
+    src: url('Fonts/hkserif-bold-webfont.woff2') format('woff2'), url('Fonts/hkserif-bold-webfont.woff') format('woff');
     font-weight: bold;
     font-style: normal;
-
 }
 
 @font-face {
     font-family: 'hk_serifitalic';
-    src: url('Fonts/hkserif-italic-webfont.woff2') format('woff2'),
-         url('Fonts/hkserif-italic-webfont.woff') format('woff');
+    src: url('Fonts/hkserif-italic-webfont.woff2') format('woff2'), url('Fonts/hkserif-italic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: italic;
-
 }
 
 @font-face {
     font-family: 'commonSans';
-    src: url('Fonts/commonsans-regular-webfont.woff2') format('woff2'),
-         url('Fonts/commonsans-regular-webfont.woff') format('woff');
+    src: url('Fonts/commonsans-regular-webfont.woff2') format('woff2'), url('Fonts/commonsans-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 body {
-  font-family : hk_serifregular;
-  color:black;
-  background-color: #cfd6de;
+    font-family: hk_serifregular;
+    color: black;
+    background-color: #cfd6de;
 }
 
-a:link, a:visited, a:active, a:hover {
-  color:black;
-  font-style:underline;
+a:link,
+a:visited,
+a:active,
+a:hover {
+    color: black;
+    font-style: underline;
 }
 
 p {
-  line-height:1.3em;
-  font-size:1em;
-}
-#header {
-  position:fixed;
-  right:0;
-  z-index:1;
+    line-height: 1.3em;
+    font-size: 1em;
 }
 
+#header {
+    position: fixed;
+    right: 0;
+    z-index: 1;
+}
 
 .wrapper {
-  overflow:hidden;
+    overflow: hidden;
 }
 
-  li {
-  position:relative;
-  font-size:1em;
-  text-decoration :none;
-  list-style-type: none;
-  line-height:1.3em;
-  margin:0.7em 0;
+li {
+    position: relative;
+    font-size: 1em;
+    text-decoration: none;
+    list-style-type: none;
+    line-height: 1.3em;
+    margin: 0.7em 0;
 }
 
 .underline {
-  text-decoration:underline;
+    text-decoration: underline;
 }
 
-.activeMenuItem {
+
+/* .activeMenuItem {
   font-family: CommonSans;
-}
+} */
+
+
+/* .menuItem:hover {
+  font-family: CommonSans;
+} */
 
 .menuItem ul {
-  list-style-type: none;
-  font-family : hk_serifregular, Fallback, sans-serif;
+    list-style-type: none;
+    font-family: hk_serifregular, Fallback, sans-serif;
 }
 
 button {
-  background: none;
-  color: inherit;
-  border: none;
-  padding: 0;
-  font: inherit;
-  cursor: pointer;
-  outline: inherit;
-  text-align:left;
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    text-align: left;
 }
 
-button:focus {outline:0;}
+button:focus {
+    outline: 0;
+}
 
 .dot {
-  height: 1.7em;
-  width: 1.7em;
-  background-color: black;
-  border-radius: 50%;
-  display: inline-block;
-  position:absolute;
-
+    height: 1.7em;
+    width: 1.7em;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
 }
 
 .dotMenu {
-  opacity:0;
+    opacity: 0;
 }
 
 .intext {
-  text-align:left;
-  width:55%;
-  margin-left:40%;
-}
-
-.menuItem:hover {
-  font-family: CommonSans;
+    text-align: left;
+    width: 55%;
+    margin-left: 40%;
 }
 
 .dotHeader {
-  top:4em;
+    z-index: 200;
+    transform: scale(1);
+    -webkit-transition: all 0.8s ease;
+    -moz-transition: all 0.8s ease;
+    transition: all 0.8s ease;
+}
+
+.dotHeader:hover {
+    -webkit-transition: all 0.8s ease;
+    -moz-transition: all 0.8s ease;
+    transition: all 0.8s ease;
+    transform: scale(2);
 }
 
 .invisible {
-  display:none;
+    display: none;
 }
 
 .visible {
-  display:block;
+    display: block;
 }
 
 #about {
-  position:fixed;
-  top:8em;
-  right:0em;
-  display:none;
-  background-color: black;
-  width:100%;
-  height:100%;
-  color:white;
-  font-family : hk_serifregular;
-  color: #cfd6de;
-  /*font-size:1.3em;*/
+    position: fixed;
+    top: 0em;
+    right: 0em;
+    display: none;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-family: hk_serifregular;
+    color: #cfd6de;
+    /*font-size:1.3em;*/
 }
 
 #menu {
-  position:fixed;
-  height:100%;
-  width:100%;
-  overflow-y:scroll;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
 }
 
 #menu::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 .textItem::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
-
 #noteContainer {
-  position:fixed;
-  left:22em;
-  top:0;
-  height:100%;
-  width:100%;
-  font-family:CommonSans;
+    position: fixed;
+    left: 22em;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    font-family: CommonSans;
 }
 
 #noteContainer:hover {
-  cursor:text;
+    cursor: text;
 }
 
 #saveBtn {
-  position:fixed;
-  bottom:5em;
-  left:12em;
-  background-color:#cfd6de;
+    position: fixed;
+    bottom: 5em;
+    left: 12em;
+    background-color: #cfd6de;
 }
+
 .textItem {
-  position:fixed;
-  overflow-y:scroll;
-  overflow-x: auto;
-  height:100%;
-  right:7em;
+    position: fixed;
+    overflow-y: scroll;
+    overflow-x: auto;
+    height: 100%;
+    right: 7em;
 }
 
 .headerNotes {
-  text-align:left;
-  width:100%;
-  font-size:0.8em;
-  margin-top : 10em;
-  padding-top : 3em;
+    text-align: left;
+    width: 100%;
+    font-size: 0.8em;
+    margin-top: 10em;
+    padding-top: 3em;
 }
 
 .firstP {
-  margin-top:10em;
+    margin-top: 10em;
 }
 
 textarea {
-  position:relative;
- /* background-color:#cfd6de;*/
-  border-style:none;
-  padding-left:1em;
-  padding-top:1.9em;
-  z-index:1000;
+    position: relative;
+    /* background-color:#cfd6de;*/
+    border-style: none;
+    padding-left: 1em;
+    padding-top: 1.9em;
+    z-index: 1000;
 }
 
 input {
-  border:dotted;
-  background:white;
-  border-width: 0.1em;
+    border: dotted;
+    background: white;
+    border-width: 0.1em;
 }
 
 .noteP {
-   font-family:CommonSans;
-   position:fixed;
-   top:0;
-   left:22em;
-   padding:2em;
-   width:30%;
+    font-family: CommonSans;
+    position: fixed;
+    top: 0;
+    left: 22em;
+    padding: 2em;
+    width: 30%;
 }
 
 .note {
-  font-family:CommonSans;
-  text-align:left;
-  z-index:400;
-  width:70%;
+    font-family: CommonSans;
+    text-align: left;
+    z-index: 400;
+    width: 70%;
 }
 
 .initialText {
-  margin-left:10em;
+    margin-left: 10em;
 }
-
 
 .textItem img {
-  display:none;
-
+    display: none;
 }
-span:hover > img {
-    display:block;
+
+span:hover>img {
+    display: block;
 }
 
 .unfinished {
-  color:#a0a8ab;
+    color: #a0a8ab;
 }
 
 .italic {
-  font-family:hk_serifitalic;
+    font-family: hk_serifitalic;
 }
 
 .ref {
-  padding-left:0;
-  font-size:0.8em;
-  margin-top : 7em;
-  padding-top : 3em;
-  padding-bottom:2em;
-  border-top: 1px solid black;
-  }
+    padding-left: 0;
+    font-size: 0.8em;
+    margin-top: 7em;
+    padding-top: 3em;
+    padding-bottom: 2em;
+    border-top: 1px solid black;
+}
 
 .refintext {
-  padding-left:0;
-  font-size:0.8em;
-  margin-top : 7em;
-  padding-top : 3em;
-  padding-bottom:2em;
-  }
+    padding-left: 0;
+    font-size: 0.8em;
+    margin-top: 7em;
+    padding-top: 3em;
+    padding-bottom: 2em;
+}
 
 img {
-  /*position:fixed;*/
-  width:30em;
-  top:13em;
-  right:13em;
-  border-style: solid;
-  border-width:0.5;
-  border-color:black;
-  z-index:200;
+    /*position:fixed;*/
+    width: 30em;
+    top: 13em;
+    right: 13em;
+    /* border-style: solid;
+    border-width: 0.5;
+    border-color: black; */
+    z-index: 200;
+}
+
+.loopItem {
+    position: relative;
+    height: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.row {
+    position: relative;
+}
+
+::scrollbar {
+    display: none;
 }
