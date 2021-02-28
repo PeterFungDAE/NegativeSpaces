@@ -50,7 +50,7 @@ function menuDots(index) {
             }
         }
     }
-    console.log("activeDots:" + activeDots)
+
     activeDots.forEach(element => element.style.opacity = "1");
 
 }
