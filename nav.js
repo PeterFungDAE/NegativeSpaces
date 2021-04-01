@@ -74,80 +74,80 @@ function starting() {
 
 
 
-function getScrollPos() {
-    return (myContext.pageYOffset || context.scrollTop) - (context.clientTop || 0);
-}
+// function getScrollPos() {
+//     return (myContext.pageYOffset || context.scrollTop) - (context.clientTop || 0);
+// }
 
-function setScrollPos(pos) {
-    myContext.scrollTop = pos;
-}
+// function setScrollPos(pos) {
+//     myContext.scrollTop = pos;
+// }
 
-function getClonesHeight() {
-    clonesHeight = 0;
+// function getClonesHeight() {
+//     clonesHeight = 0;
 
-    for (i = 0; i < clones.length; i += 1) {
-        clonesHeight = clonesHeight + clones[i].offsetHeight;
-    }
+//     for (i = 0; i < clones.length; i += 1) {
+//         clonesHeight = clonesHeight + clones[i].offsetHeight;
+//     }
 
-    return clonesHeight;
-}
+//     return clonesHeight;
+// }
 
-function reCalc() {
-    scrollPos = getScrollPos();
-    scrollHeight = myContext.scrollHeight;
-    clonesHeight = getClonesHeight();
+// function reCalc() {
+//     scrollPos = getScrollPos();
+//     scrollHeight = myContext.scrollHeight;
+//     clonesHeight = getClonesHeight();
 
-    if (scrollPos <= 0) {
-        setScrollPos(1); // Scroll 1 pixel to allow upwards scrolling
-    }
-}
+//     if (scrollPos <= 0) {
+//         setScrollPos(1); // Scroll 1 pixel to allow upwards scrolling
+//     }
+// }
 
-function scrollUpdate() {
-    if (!disableScroll) {
-        scrollPos = getScrollPos();
+// function scrollUpdate() {
+//     if (!disableScroll) {
+//         scrollPos = getScrollPos();
 
-        if (clonesHeight + scrollPos >= scrollHeight) {
-            // Scroll to the top when you’ve reached the bottom
-            setScrollPos(1); // Scroll down 1 pixel to allow upwards scrolling
-            disableScroll = true;
-        } else if (scrollPos <= 0) {
-            // Scroll to the bottom when you reach the top
-            setScrollPos(scrollHeight - clonesHeight);
-            disableScroll = true;
-        }
-    }
+//         if (clonesHeight + scrollPos >= scrollHeight) {
+//             // Scroll to the top when you’ve reached the bottom
+//             setScrollPos(1); // Scroll down 1 pixel to allow upwards scrolling
+//             disableScroll = true;
+//         } else if (scrollPos <= 0) {
+//             // Scroll to the bottom when you reach the top
+//             setScrollPos(scrollHeight - clonesHeight);
+//             disableScroll = true;
+//         }
+//     }
 
-    if (disableScroll) {
-        // Disable scroll-jumping for a short time to avoid flickering
-        window.setTimeout(function() {
-            disableScroll = false;
-        }, 40);
-    }
-}
+//     if (disableScroll) {
+//         // Disable scroll-jumping for a short time to avoid flickering
+//         window.setTimeout(function() {
+//             disableScroll = false;
+//         }, 40);
+//     }
+// }
 
-function init() {
-    console.log("init")
-    starting();
-    myContext = document.querySelector('.js-loop');
-    clones = myContext.querySelectorAll('.is-clone');
-    setScrollPos(Math.round(clones[0].getBoundingClientRect().top + getScrollPos() - (context.offsetHeight - clones[0].offsetHeight) / 2));
+// function init() {
+//     console.log("init")
+//     starting();
+//     myContext = document.querySelector('.js-loop');
+//     clones = myContext.querySelectorAll('.is-clone');
+//     setScrollPos(Math.round(clones[0].getBoundingClientRect().top + getScrollPos() - (context.offsetHeight - clones[0].offsetHeight) / 2));
 
-    reCalc();
+//     reCalc();
 
-    myContext.addEventListener('scroll', function() {
-        window.requestAnimationFrame(scrollUpdate);
-    }, false);
+//     myContext.addEventListener('scroll', function() {
+//         window.requestAnimationFrame(scrollUpdate);
+//     }, false);
 
-    window.addEventListener('resize', function() {
-        window.requestAnimationFrame(reCalc);
-    }, false);
-}
+//     window.addEventListener('resize', function() {
+//         window.requestAnimationFrame(reCalc);
+//     }, false);
+// }
 
-if (document.readyState !== 'loading') {
+// if (document.readyState !== 'loading') {
 
-    //  init()
-} else {
+//     //  init()
+// } else {
 
-    document.addEventListener('DOMContentLoaded', init, false)
+//     document.addEventListener('DOMContentLoaded', init, false)
 
-}
+// }

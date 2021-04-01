@@ -5,7 +5,7 @@ var textItems = document.querySelectorAll("div.textItem");
 document.addEventListener('DOMContentLoaded', function() {
 
     displayAbout();
-    idleRandomDots(500);
+    // idleRandomDots(500);
     //create2Dotheader();
     // document.body.onmousemove = event => {idleRandomDots(500);}
     // var activeTextItem = document.getElementsByClassName("textItem visible");
