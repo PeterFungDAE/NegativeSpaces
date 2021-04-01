@@ -47,14 +47,14 @@ function displayAbout() {
     var about = document.getElementById('about');
     var dotHeader = document.querySelectorAll("div.dotHeader");
     var dot0 = dotHeader[0]
-    var dot1 = dotHeader[1]
-    dot0.style.left = getRandomInt(window.innerWidth) + "px";
-    dot0.style.top = getRandomInt(window.innerHeight) + "px";
-
-    dot1.style.top = getRandomInt(window.innerWidth) + "px";
-    dot1.style.left = getRandomInt(window.innerHeight) + "px";
-    console.log("dot0:" + dot0.style.top, dot0.style.left + "dot1:" + dot1.style.top, dot1.style.left)
-    console.log("innerheight" + window.innerHeight);
+        //var dot1 = dotHeader[1]
+    dot0.style.left = getRandomInt(window.innerWidth / 2) + "px";
+    dot0.style.top = getRandomInt(window.innerHeight - 50) + "px";
+    console.log("inner height " + window.innerHeight, "innerwidth " + window.innerWidth);
+    // dot1.style.top = getRandomInt(50, window.innerHeight - 50) + "px";
+    //dot1.style.left = getRandomInt(50, window.innerWidth / 2) + "px";
+    // console.log("dot0:" + dot0.style.top, dot0.style.left + "dot1:" + dot1.style.top, dot1.style.left)
+    // console.log("innerheight" + window.innerHeight);
     var dots = document.querySelectorAll("div.dot");
     var click = 0;
 
@@ -67,7 +67,7 @@ function displayAbout() {
             document.body.style.backgroundColor = "#cfd6de";
             headerDotHover = false;
             aboutActive = false;
-            dot1.style.backgroundColor = "black";
+            // dot1.style.backgroundColor = "black";
             dot0.style.backgroundColor = "black";
             dots.forEach(dot => dot.style.backgroundColor = "black");
             click = 0;
@@ -84,31 +84,31 @@ function displayAbout() {
             aboutActive = true;
         }
     });
-    dot1.addEventListener("click", function(event) {
-        if (click > 0) {
+    // dot1.addEventListener("click", function(event) {
+    //     if (click > 0) {
 
 
-            console.log("re-clicked")
-            about.style.display = "none";
-            document.body.style.backgroundColor = "#cfd6de";
-            headerDotHover = false;
-            aboutActive = false;
+    //         console.log("re-clicked")
+    //         about.style.display = "none";
+    //         document.body.style.backgroundColor = "#cfd6de";
+    //         headerDotHover = false;
+    //         aboutActive = false;
 
-            dots.forEach(dot => dot.style.backgroundColor = "black");
-            click = 0;
-        } else {
-            click++
-            about.style.display = "block"
-            console.log("clicked")
+    //         dots.forEach(dot => dot.style.backgroundColor = "black");
+    //         click = 0;
+    //     } else {
+    //         click++
+    //         about.style.display = "block"
+    //         console.log("clicked")
 
-            about.style.backgroundColor = "black";
-            document.body.style.backgroundColor = "black";
+    //         about.style.backgroundColor = "black";
+    //         document.body.style.backgroundColor = "black";
 
-            dots.forEach(dot => dot.style.backgroundColor = "#cfd6de");
-            headerDotHover = true;
-            aboutActive = true;
-        }
-    });
+    //         dots.forEach(dot => dot.style.backgroundColor = "#cfd6de");
+    //         headerDotHover = true;
+    //         aboutActive = true;
+    //     }
+    //});
 
 }
 
