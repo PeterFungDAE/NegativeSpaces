@@ -51,10 +51,10 @@ function displayAbout() {
     dot0.style.left = getRandomInt(window.innerWidth / 2) + "px";
     dot0.style.top = getRandomInt(window.innerHeight - 50) + "px";
     console.log("inner height " + window.innerHeight, "innerwidth " + window.innerWidth);
-    // dot1.style.top = getRandomInt(50, window.innerHeight - 50) + "px";
-    //dot1.style.left = getRandomInt(50, window.innerWidth / 2) + "px";
-    // console.log("dot0:" + dot0.style.top, dot0.style.left + "dot1:" + dot1.style.top, dot1.style.left)
-    // console.log("innerheight" + window.innerHeight);
+    // // dot1.style.top = getRandomInt(50, window.innerHeight - 50) + "px";
+    // //dot1.style.left = getRandomInt(50, window.innerWidth / 2) + "px";
+    // // console.log("dot0:" + dot0.style.top, dot0.style.left + "dot1:" + dot1.style.top, dot1.style.left)
+    // // console.log("innerheight" + window.innerHeight);
     var dots = document.querySelectorAll("div.dot");
     var click = 0;
 
